@@ -8,6 +8,7 @@ import ru.listset.collections.model.Employee;
 import ru.listset.collections.services.EmployeeService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("employee")
@@ -41,7 +42,7 @@ public class EmployeeController {
         return employeeService.find(firstName, lastName);
     }
     @GetMapping
-    public List<Employee> getAll () {
+    public Map<String, Employee> getAll () {
         return employeeService.getAll();
     }
 }
